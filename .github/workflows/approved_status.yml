@@ -23,6 +23,8 @@ jobs:
       !contains(github.event.pull_request.head.ref, 'datadog-api-spec/test/') &&
       contains(github.event.pull_request.head.ref, 'datadog-api-spec/generated/')
     steps:
+      - run: PR HI
+          echo "HI!"
       - name: Get GitHub App token
         id: get_token
         uses: actions/create-github-app-token@v1
